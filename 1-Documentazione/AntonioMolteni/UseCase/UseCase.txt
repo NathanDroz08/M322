@@ -1,0 +1,6 @@
+Come utente desidero consultare il saldo.
+Come utente desidero effettuare il pagamento.
+Come utente desidero un sistema di Login.
+Come utente desidero recuperare la password in caso di dimenticanza.
+In caso di problemi desidero contattare il supporto clienti con un formulario.
+Il supporto cliente deve riceve una notifica automatica in caso di supporto.
