@@ -1,4 +1,6 @@
-﻿namespace MyKanban
+﻿using MyKanban.Models;
+
+namespace MyKanban
 {
     public partial class MainPage : ContentPage
     {
@@ -9,16 +11,29 @@
             InitializeComponent();
         }
 
-        private void OnCounterClicked(object sender, EventArgs e)
+        private async void OnLoginClicked(object sender, EventArgs e)
         {
-            count++;
+            if (string.IsNullOrEmpty(EntNameAccount.Text) ||
+                string.IsNullOrEmpty(EntPasswordAccount.Text))
+            {
+                await DisplayAlert("Errore", "Nome account o Password non inserito", "Ok");
+            }
 
-            if (count == 1)
-                CounterBtn.Text = $"Clicked {count} time";
-            else
-                CounterBtn.Text = $"Clicked {count} times";
+            try
+            { 
+                Account account = new Account
+                {
+                    Username = EntNameAccount.Text,
+                    Password = EntPasswordAccount.Text,
+                };
 
-            SemanticScreenReader.Announce(CounterBtn.Text);
+                string filePath = $"{Path.Combine(FileSystem.AppDataDirectory, EntNameAccount.Text)}.txt";
+                File.AppendAllText(filePath, $"{account.ToRiga()}{Environment.NewLine}");
+            }
+            catch (Exception)
+            {
+                await DisplayAlert("Errore", "Compilari i campi con i valori corretti", "Ok");
+            }
         }
     }
 
