@@ -63,7 +63,11 @@
 	</ItemGroup>
 
 	<ItemGroup>
+<<<<<<< Updated upstream
 	  <MauiXaml Update="RegisterPage.xaml">
+=======
+	  <MauiXaml Update="HomePage.xaml">
+>>>>>>> Stashed changes
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>

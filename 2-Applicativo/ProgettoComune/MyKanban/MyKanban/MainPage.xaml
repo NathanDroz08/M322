@@ -39,7 +39,18 @@
             </Grid>
         </Frame>
 
+<<<<<<< Updated upstream
     </Grid>
 
+=======
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+
+
+        </VerticalStackLayout>
+    </ScrollView>
+>>>>>>> Stashed changes
 
 </ContentPage>

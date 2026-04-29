@@ -4,12 +4,17 @@ namespace MyKanban
 {
     public partial class MainPage : ContentPage
     {
+<<<<<<< Updated upstream
+=======
+        
+>>>>>>> Stashed changes
 
         public MainPage()
         {
             InitializeComponent();
         }
 
+<<<<<<< Updated upstream
         private async void OnLoginClicked(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(EntNameAccount.Text) ||
@@ -65,6 +70,13 @@ namespace MyKanban
         private async void OnRegisterClicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new RegisterPage());
+=======
+ 
+
+        private void OnCounterClicked(object sender, EventArgs e)
+        {
+           
+>>>>>>> Stashed changes
         }
     }
 }
